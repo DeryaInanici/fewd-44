@@ -14,11 +14,9 @@ p {
 /* Layout */
 /* ------------------------ */
 body {
-	background-color: #444444;
-	color: #FFFFFF;
-
+	background-color: #FAFAFA;
+	color: #878787;
 	padding: 15px;
-	border: 5px solid #878787;
 	margin: 30px;
 }
 
@@ -34,13 +32,20 @@ footer {
 	font-size: 36px;
 }
 
-li {
+header li,
+footer li {
 	display: inline;
 	font-weight: bold;
 }
 
+.experiences {
+	font-family: helvetica;
+	font-size: 20px;
+	font-weight: normal;
+}
+
 a {
-	color: #23D39E;
+	color: #008080;
 }
 
 img {
@@ -51,10 +56,9 @@ img {
 	margin-bottom: 20px;
 }
 
-
 main {
-	border-top: 1px solid #878787;
-	border-bottom: 1px solid #878787;
+	border-top: 1px #878787 solid;
+	border-bottom: 1px #878787 solid;
 	padding-top: 20px;	
 	padding-bottom: 20px;
 
@@ -70,7 +74,7 @@ main {
 /* Headings */
 /* ------------------------ */
 
-hi, 
+h1, 
 li {
 	font-family: Arial;
 }
