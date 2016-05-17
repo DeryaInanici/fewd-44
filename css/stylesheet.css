@@ -1,0 +1,14 @@
+* {
+	margin: 0;
+	padding: 0;	
+}
+
+h1 {
+	font-family: "chantal",sans-serif;
+	margin: 20px;
+}
+
+ul {
+	margin: 20px;
+	list-style: none;
+}
