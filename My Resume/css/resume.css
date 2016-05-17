@@ -7,83 +7,139 @@
 
 p {
 	line-height: 1.5;
-	margin-bottom: 15px;
+	margin-bottom: 0px;
 }
 
 
 /* Layout */
 /* ------------------------ */
 body {
-	background-color: #FAFAFA;
+	background-color: #D0D0D0;
 	color: #878787;
-	padding: 15px;
-	margin: 30px;
-}
-
-header {
-	text-align: center;
-}
-
-footer {
-	text-align: center;
+	padding: 0px;
+	font-family: helvetica neue;
 }
 
 .title {
-	font-size: 36px;
+	font-size: 50px;
+	padding: 10px;
+	margin-bottom: 100px;
+	float: left;
 }
 
 header li,
 footer li {
 	display: inline;
-	font-weight: bold;
-}
-
-.experiences {
-	font-family: helvetica;
-	font-size: 20px;
-	font-weight: normal;
 }
 
 a {
 	color: #008080;
+	text-decoration: none;
 }
 
 img {
-	float: right;
+	float: left;
 	padding: 5px;
-	border: 1px solid #878787;
-	margin-left: 10px;
-	margin-bottom: 20px;
+	padding-right: 15px;
+	margin-bottom: 15px;
+	margin-top: 15px;
+	opacity: 0.8;
 }
 
 main {
-	border-top: 1px #878787 solid;
-	border-bottom: 1px #878787 solid;
-	padding-top: 20px;	
-	padding-bottom: 20px;
-
-	/* shorthand */
-	padding: 20px 0;
-	margin: 20px 0;
-
+	padding:30px;	
+	background-color: #008080;
+	color: #FFFFFF;
 	overflow: hidden;
+	padding-bottom: 500px;
 }
 
-
+main p {
+	font-style: italic;
+	opacity: 0.8;
+	margin-top: 5px;
+	font-family: "chantal",sans-serif;
+}
 
 /* Headings */
 /* ------------------------ */
 
-h1, 
-li {
-	font-family: Arial;
+header {
+	text-align: left;
+	display: flex;
 }
 
 /* Navigation Lists */
 /* ------------------------ */
 
+.navigation li {
+	text-align: left;
+	margin-right: 25px;
+}
+
+header ul {
+	padding-top: 50px;
+	padding-left: 20px;
+
+}
+
+footer {
+	text-align: center;
+	padding: 10px;
+	margin-top: 15px;
+	position:fixed;
+   	left:0px;
+   	bottom:0px;
+   	height:20px;
+   	width:100%;
+   	background:#999;
+}
+
+.footer li a {
+	padding:10px;
+	color: white;
+}
 
 
+h1 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+h2 {
+	font-size: 20px;
+	margin-top: 40px;
+}
+
+#what {
+	font-size: 15px;
+}
+
+#when {
+	font-size: 13px;
+	padding-left: 10px;
+}
+ul{
+	list-style: none;
+}
+
+ol {
+	margin-bottom: 20px;
+	list-style: none;
+}
+
+ol li {
+	padding-top: 5px;
+}
+
+.headline {
+	padding-top: 20px;
+}
+.blabla {
+	font-style: italic;
+	opacity: 0.8;
+	font-family: "chantal",sans-serif;
+	margin-bottom: 5px;
+}
 /* Links */
 /* ------------------------ */
 
