@@ -3,12 +3,30 @@
 	padding: 0;	
 }
 
+/*Background*/
+
+body {
+	background-color: DarkCyan;
+}
+
+/*Headline*/
+
 h1 {
 	font-family: "chantal",sans-serif;
 	margin: 20px;
 }
 
+/*Links*/
+
 ul {
 	margin: 20px;
 	list-style: none;
+	font-size: 20px;
+	color: white;
+
+}
+
+a {
+	color: white;
+	text-decoration: none;
 }

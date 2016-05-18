@@ -14,8 +14,8 @@ p {
 /* Layout */
 /* ------------------------ */
 body {
-	background-color: #D0D0D0;
 	color: #878787;
+	background-color: #008080;
 	padding: 0px;
 	font-family: helvetica neue;
 }
@@ -48,10 +48,9 @@ img {
 
 main {
 	padding:30px;	
-	background-color: #008080;
 	color: #FFFFFF;
 	overflow: hidden;
-	padding-bottom: 500px;
+	padding-bottom: 200px;
 }
 
 main p {
@@ -67,6 +66,7 @@ main p {
 header {
 	text-align: left;
 	display: flex;
+	background-color: #D0D0D0; 
 }
 
 /* Navigation Lists */
