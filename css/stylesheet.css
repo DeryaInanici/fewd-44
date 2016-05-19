@@ -12,7 +12,7 @@ body {
 	text-align: center;
 	font-family: helvetica;
 	font-weight: light;
-	border-bottom: 2px solid black;
+	border-bottom: 5px solid black;
 	border-top: 2px solid black;
 }
 
@@ -64,12 +64,29 @@ h2 {
 
 /*Links*/
 
+.links {
+	display: flex;
+}
+
+.links-left {
+	flex: 1;
+}
+
+.links-middle {
+	flex: 1;
+}
+
+.links-right {
+	flex: 1;
+}
+
 ul {
 	margin: 20px;
 	list-style: none;
 	font-size: 20px;
 	color: white;
 	line-height: 30px;
+	text-align: center;
 
 }
 
