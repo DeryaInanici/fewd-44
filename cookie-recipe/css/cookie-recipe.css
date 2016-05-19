@@ -1,0 +1,112 @@
+/* Wildcard*/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/*Columns*/
+
+body {
+	display: flex;
+	font-family: arial;
+}
+
+.left-column {
+	flex: 2;
+	padding: 20px;
+	background-color: #F0F0D9;
+}
+
+.right-column {
+	flex: 1;
+	padding: 5px 20px;
+	background-color: #EFD794;
+}
+
+/*Header*/
+
+h1 {
+	color: #B06248;
+	font-weight: bold;
+	font-size: 20px;
+	padding-bottom: 5px;
+}
+
+.by {
+	color: #8AAC92;
+	font-size: 12px;
+	padding-bottom: 5px;
+}
+
+img {
+	width: 100%;
+}
+
+h2 {
+	color: #B06248;
+	font-size: 13px;
+	margin-top: 15px;
+}
+
+p {
+	font-size: 13px;
+}
+.prep {
+	display: flex;
+}
+.prep li {
+	list-style: none;
+	flex: 1;
+	text-align: center;
+}
+
+/*Ingredients*/
+
+.ingredients {
+	margin: 5px;
+	font-size: 13px;
+	line-height: 17px;
+	margin-left: 20px;
+}
+
+.instructions {
+	margin: 5px;
+	font-size: 13px;
+	line-height: 17px;
+	margin-left: 15px;
+}
+
+.instructions li {
+	padding-left: 5px;
+}
+
+/*Right Column*/
+
+.related-recipes {
+	font-size: 11px;
+	margin-left: 15px;
+	line-height: 15px;
+}
+
+blockquote {
+	font-size: 11px;
+	line-height: 15px;
+}
+
+.questions {
+	font-size: 11px;
+	line-height: 15px;
+	margin-top: 10px;
+}
+
+.nutrition {
+	font-size: 11px;
+	line-height: 15px;
+}
+
+.source {
+	font-size: 11px;
+	line-height: 15px;
+	margin-top: 20px;
+}
