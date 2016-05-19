@@ -1,4 +1,5 @@
 * {
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;	
 }
@@ -7,13 +8,58 @@
 
 body {
 	background-color: DarkCyan;
+	margin: 100px;
+	text-align: center;
+	font-family: helvetica;
+	font-weight: light;
+	border-bottom: 2px solid black;
+	border-top: 2px solid black;
 }
 
 /*Headline*/
 
 h1 {
-	font-family: "chantal",sans-serif;
-	margin: 20px;
+	padding: 10px;
+	font-size: 70px;
+}
+
+/*Title*/
+
+h2 {
+	padding: 10px;
+
+}
+
+.title {
+	display: flex;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+.title-left {
+	flex: 1;
+  	background: repeating-linear-gradient(
+    	45deg,
+    	#000000,
+    	#008B8B 2px,
+    	#008B8B 2px,
+    	#008B8B 8px
+    );
+}
+
+.title-middle {
+	flex: 1;
+}
+
+.title-right {
+	flex: 1;
+	background: repeating-linear-gradient(
+    	135deg,
+    	#000000,
+    	#008B8B 2px,
+    	#008B8B 2px,
+    	#008B8B 8px
+    );
 }
 
 /*Links*/
@@ -23,6 +69,7 @@ ul {
 	list-style: none;
 	font-size: 20px;
 	color: white;
+	line-height: 30px;
 
 }
 
