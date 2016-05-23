@@ -94,3 +94,7 @@ a {
 	color: white;
 	text-decoration: none;
 }
+
+a:hover {
+	color: #B8B8B8;
+}
