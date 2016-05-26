@@ -34,6 +34,7 @@ h1{
 
 .hamburger {
 	position: relative;
+	display: none;
 }
 
 .fa {
@@ -206,6 +207,32 @@ h3 {
 	text-decoration: none;
 }
 
+
+/*Responsive Mode*/
+
 @media (max-width: 750px) {
 
+/*Navigation*/
 
+.hamburger {
+	position: relative;
+	display: block;
+}
+
+.fa {
+	position: absolute;
+	right: 0px;
+	font-size: 30px;
+}
+
+.navigation {
+	display: none;
+}
+
+/*Sections Layout*/
+
+.section-parent {
+	display: flex;
+	margin: 40px 0;
+	flex-direction: column;
+}
