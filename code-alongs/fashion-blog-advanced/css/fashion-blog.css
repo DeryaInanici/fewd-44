@@ -210,7 +210,27 @@ h3 {
 
 /*Responsive Mode*/
 
-@media (max-width: 750px) {
+
+
+@media (max-width: 700px) {
+
+/*Headline*/
+
+.headline {
+	display: flex;
+	flex-direction: column;
+}
+.h1 {
+	flex: 1;
+}
+
+.better-dressed {
+	font-size: 25px;
+	font-weight: lighter;
+	margin: 5px 0;
+	padding: 0;
+	flex:1;
+}
 
 /*Navigation*/
 
