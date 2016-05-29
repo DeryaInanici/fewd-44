@@ -2,14 +2,35 @@
 <html>
 <head>
 	<title>Temperature Converter</title>
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/temperature-converter.css">
 </head>
 <body>
 
+<!-- Headline -->
+
 <h1>Temperature Converter</h1>
 
-<input class="fahrenheit">
+<!-- Converter -->
 
-<button class="convert">Convert!</button>
+<div class="converter-container">
+	
+	<div class="fahrenheit-container">
+		<h2>Fahrenheit</h2>
+		<input class="fahrenheit">
+	</div>
+	
+	<div class="equals">
+		<p>=</p>
+	</div>
+	
+	<div class="celsius-container">
+		<h2>Celsius</h2>
+		<input class="celsius">
+	</div>
+
+</div>
+
 
 <script src="js/temperature-converter.js"></script>
 </body>
