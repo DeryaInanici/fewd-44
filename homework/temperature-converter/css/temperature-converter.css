@@ -60,3 +60,11 @@ input {
 	font-size: 15px;
 	text-align: center;
 }
+
+@media (max-width: 460px) {
+	
+	.converter-container{
+		display: flex;
+		flex-direction: column;
+	}
+}
