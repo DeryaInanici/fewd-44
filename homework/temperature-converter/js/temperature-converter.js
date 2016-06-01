@@ -13,8 +13,8 @@ var celsius = document.querySelector(".celsius");
 
 // Events
 // -------------------------
-fahrenheit.addEventListener('input', fahrenheitToCelsius);
-celsius.addEventListener('input', celsiusToFahrenheit);
+fahrenheit.addEventListener('keyup', fahrenheitToCelsius);
+celsius.addEventListener('keyup', celsiusToFahrenheit);
 
 
 // Event Handler
