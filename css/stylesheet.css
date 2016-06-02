@@ -7,7 +7,7 @@
 /*Background*/
 
 body {
-	background-color: DarkCyan;
+	background-color: #FED530;
 	margin: 100px;
 	text-align: center;
 	font-family: helvetica;
@@ -38,13 +38,6 @@ h2 {
 
 .title-left {
 	flex: 1;
-  	background: repeating-linear-gradient(
-    	45deg,
-    	#000000,
-    	#008B8B 2px,
-    	#008B8B 2px,
-    	#008B8B 8px
-    );
 }
 
 .title-middle {
@@ -53,13 +46,6 @@ h2 {
 
 .title-right {
 	flex: 1;
-	background: repeating-linear-gradient(
-    	135deg,
-    	#000000,
-    	#008B8B 2px,
-    	#008B8B 2px,
-    	#008B8B 8px
-    );
 }
 
 /*Links*/
