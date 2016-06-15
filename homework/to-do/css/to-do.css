@@ -1,0 +1,68 @@
+body {
+	padding: 30px;
+	font-family: Helvetica;
+	font-weight: lighter;
+}
+
+h1 {
+	text-align: center;
+	font-weight: lighter;
+	margin-bottom: 20px;
+}
+
+.input-fields {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 10px;
+	text-align: center;
+	background: #764B8E;
+	border-radius: 5px;
+}
+
+.text-input,
+.date-input {
+	height: 30px;
+	padding: 10px 0 10px 10px;
+	margin: 10px;
+	font-size: 13px;
+	font-family: helvetica;
+	color: gray;
+	width: 140px;
+}
+
+.submit-button {
+	background-color: #260339;
+	border: none;
+	height: 30px;
+	padding: 0 20px;
+	font-size: 15px;
+	color: white;
+	margin: 10px;
+}
+
+.to-do-list {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+
+}
+
+.checkbox {
+	margin: 10px;
+}
+
+input[type='checkbox']:checked + span,
+input[type='checkbox']:checked + span + span {
+	text-decoration: line-through;
+}
+
+li {
+	margin: 10px;
+}
+
+.date {
+	margin-left: 10px;
+	font-size: 14px;
+}

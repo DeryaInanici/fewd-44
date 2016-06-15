@@ -48,6 +48,23 @@ h2 {
 	flex: 1;
 }
 
+
+/*Arrows*/
+
+.arrows-left {
+	position: relative;
+}
+
+.arrows-left li {
+	position: absolute;
+	right: 0px;
+}
+
+img {
+	width: 100px;
+}
+
+
 /*Links*/
 
 .links {
@@ -59,7 +76,7 @@ h2 {
 }
 
 .links-middle {
-	flex: 3;
+	flex: 1;
 }
 
 .links-right {
