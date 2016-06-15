@@ -13,9 +13,18 @@ function bodyColorChanger(color) {
 //--------------------
 
 ul.addEventListener('click', changeTheme);
+window.addEventListener('load', reloadPage);
+
 
 // Event Handler Functions
 // -----------------------
+
+function reloadPage(e) {
+	// on page load, get the theme from localStorage 
+	var color = localStorage.getItem('theme');
+
+	updatePage(color);
+}
 
 function changeTheme(e) {
 
@@ -24,9 +33,16 @@ function changeTheme(e) {
 		return;
 	}
 
-	console.log(e.target, e.type);
+	updatePage(e.target.className);
 
-	body.className = e.target.className;
-	theme.textContent = e.target.className;
+	// save theme to localStorage
+	localStorage.setItem('theme', e.target.className);
 }
 
+	// get theme from localstorage
+	// e.g. thistle
+function updatePage(color) {
+
+	body.className = color;
+	theme.textContent = color;
+}
