@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Transition</title>
+
+<!-- CSS -->
+
+<style>
+
+div {
+	transition-property: all;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+
+	/*shorthand:
+	transition: all 2s ease;*/
+}
+
+.square {
+	width: 100px;
+	height: 100px;
+	background: #936C71;
+}
+
+.green {
+	background: #88926B;
+	padding-left: 800px;
+}
+
+.circle {
+	width: 150px;
+	height: 150px;
+	background: #88926B;
+	border-radius: 50%;
+}
+
+.oval {
+	border-radius: 10%;
+	background: #5C4E68;
+}
+
+section {
+	line-height: 50px;
+	width: 100px;
+	background: thistle;
+	text-align: center;
+}
+
+.container {
+	overflow: hidden;
+}
+.close {
+	transform: translateY(-300px);
+}
+
+.cover {
+ 	transition: all 2s ease-in-out;
+}
+
+.wheel {
+	width: 150px;
+	height: 150px;
+	transition: all 3s ease;
+}
+
+.wheel img {
+	width: 100%;
+}
+
+.spin {
+	transform: translateX(500px);
+}
+.spin .wheel {
+	transform: rotate(360deg); 
+	transform-origin: 50% 50%;
+}	
+
+</style>
+
+<!-- html -->
+</head>
+<body>
+
+<aside class="cover">
+	<aside class="wheel">
+		<img src="
+		http://www.foxsports.com/content/dam/fsdigital/fscom/global/dev/static_resources/nba/teams/retina/9.png">
+	</aside>
+</aside>
+
+<div class="square"></div>
+
+<div class="circle"></div>
+
+<section class="blog-tab">   Blog   </section>
+<div class="container">
+	<div class="blog-content   close">
+		<p>
+		Popcorn with brewers yeast tripping on loving kindness, natural homebirth Bay Area dharma healing tonic eye-gazing henna tattoo. Breathwork grass-fed downward dog juicy, positive affirmation prayerformance. Kirtan reiki master sarong as we honor, be the change wicca patchouli beltane. Optimal frequency jasmine Spirit Rock, transformative fair trade. Aho core strength mother earth harmony, saturn return blessed.
+		</p>
+	</div>
+</div>
+
+<!-- javascript -->
+
+<script>
+
+var cover = document.querySelector('.cover');
+var wheel = document.querySelector('.wheel');
+var square = document.querySelector('.square');
+var circle = document.querySelector('.circle');
+var blogTab = document.querySelector('.blog-tab');
+var blogContent = document.querySelector('.blog-content')
+
+square.addEventListener('click', roundIt);
+circle.addEventListener('click', ovalIt);
+blogTab.addEventListener('click', showBlogTab);
+wheel.addEventListener('click', spin);
+
+function roundIt() {
+	console.log('roundIt');
+	square.classList.toggle('green');
+}
+
+function ovalIt() {
+	console.log('circleIt');
+	circle.classList.toggle('oval');
+}
+
+function showBlogTab() {
+	blogContent.classList.toggle('close');
+}
+
+function spin() {
+	cover.classList.toggle('spin');
+}
+
+</script>
+
+</body>
+</html>
