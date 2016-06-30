@@ -7,7 +7,7 @@ body {
 .container {
 	position: relative;
 	width: 1000px;
-	background-color: #cceecc;
+	/* */
 	margin: auto;
 	text-align: center;
 }
@@ -26,47 +26,139 @@ h1 {
 	position: absolute;
 	top: 50px;
 	left: 530px;
+	cursor: pointer;
 }
 
 .lowenzahn {
-	font-size: 30px;
+	font-size: 35px;
 	position: absolute;
 	top: 110px;
-	left: 600px;
+	left: 500px;
+	color: #676767;
 }
 
 /*Main Image*/
 
 .dandelion {
 	margin-top: 60px;
+	width: 500px;
 }
 
+/*Pusteblume*/
+
+.pusteblume {
+	width: 130px;
+	height: 90px;
+	position: absolute;
+	top: 150px;
+	left: 310px;
+	cursor: pointer;
+}
 /*Seeds*/
 
 .seed {
 	position: absolute;
-	top: 200px;
-	left: 350px;
+	top: 170px;
+	left: 330px;
+	width: 20px;
+	display: none;
 }
+
+
+/*Info*/
 
 .number {
 	position: absolute;
 	top: 100px;
 	left: 200px;
 	padding: 30px;
-	border: 1px solid gray;
-}
-
-.number-1 {
-	top: 400px;
+	font-size: 30px;
+	color: #F5A623;
 }
 
 .text {
 	position: absolute;
 	top: 100px;
 	left: 200px;
+	width: 220px;
+	text-align: left;
+	color: #F5A623;
+	line-height: 25px;
+}
+
+/*1*/
+
+.number-1 {
+	top: 120px;
+	left: 500px;
+	cursor: pointer;
+}
+
+.text-1 {
+	top: 180px;
+	left: 570px;
+	width: 400px;
+	display: none;
+}
+
+/*2*/
+
+.number-2 {
+	top: 225px;
+	left: 620px;
+	cursor: pointer;
+}
+
+.text-2 {
+	top: 290px;
+	left: 690px;
+	width: 280px;
+	display: none;
+}
+
+/*3*/
+
+.number-3 {
+	top: 390px;
+	left: 670px;
+	cursor: pointer;
 }
 
 .text-3 {
-	top: 200px;
+	top: 450px;
+	left: 740px;
+	width: 250px;
+	display: none;
+}
+
+/*4*/
+
+.number-4 {
+	position: absolute;
+	top: 360px;
+	left: 230px;
+	cursor: pointer;
+}
+
+.text-4 {
+	top: 420px;
+	left: 30px;
+	width: 220px;
+	display: none;
+}
+
+/*5*/
+
+.number-5 {
+	position: absolute;
+	top: 170px;
+	left: 260px;
+	cursor: pointer;
+}
+
+.text-5 {
+	top: 230px;
+	left: 30px;
+	width: 245px;
+	display: none;
 }
