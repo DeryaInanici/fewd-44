@@ -9,43 +9,43 @@ var searchInput = document.querySelector('.search-input');
 // Event Listener
 // ----------------------
 
-form.addEventListener("submit", getRestaurants);
+form.addEventListener("submit", getMovies);
 
 
 // Event Handler
 // ----------------------
 
-function getRestaurants(e) {
+function getMovies(e) {
 	console.log('worked');
 
 	e.preventDefault();
 
 	//building the api url
 	var search = parseFloat(input.value);
-	var url = "http://api.locu.com/v1_0/venue/search/?api_key=48d4f4e1060406cf81a24351fdfe65c7e83c34cf&has_menu=true&postal_code=" + search;
+	var url = "http://www.omdbapi.com/?s=elf" + search;
 
 	// two JSON techniques:
 	
 	// 1. use AJAX with getJSON
 	// making ajax request for data from api
-	// $.getJSON(url, updateRestaurants);
+	$.getJSON(url, updateMovies);
 
 	// 2. 
 	// Use JSONP to get JSON data
 	// create a new <script> tag instead of ajax 
 
-	url = url + "&callback=updateRestaurants";
-	var scriptTag = document.createElement("script");
-	scriptTag.src = url;
-	document.body.appendChild(scriptTag);
+	// url = url + "&callback=updateRestaurants";
+	// var scriptTag = document.createElement("script");
+	// scriptTag.src = url;
+	// document.body.appendChild(scriptTag);
 }
 
 
 // Update page
 // ----------------------
-function updateRestaurants(json) {
+function updateMovies(json) {
 
-	searchInput.innerHTML = "";
+	results.innerHTML = "";
 	
 	p = document.createElement('p');
 	p.textContent = "Results for " + input.value;
@@ -56,35 +56,35 @@ function updateRestaurants(json) {
 	results.innerHTML = "";
 	input.value = "";
 
-	json.objects.forEach(createRestaurant);
+var movies = json['Search'];
+
+	movies.forEach(createMovieItem);
 }
 
-function createRestaurant(restaurant) {
+function createMovieItem(movie) {
 	// console.log('updateRestaurants');
-	console.log('restaurants');
+	console.log('movies');
 
 	// Step 1: create markup
 
 	var li = document.createElement("li");
-	var h2 = document.createElement("h2");
-	var p = document.createElement("p");
 	var a = document.createElement("a");
 
 	// Step 2: add content / attributes
 
-	h2.textContent = restaurant.name;
-	p.textContent = restaurant.street_address;
-	a.textContent = restaurant.phone;
-	a.setAttribute('href', 'tel:' + restaurant.phone);
-
+	a.textContent = movie['Title'];
+	a.setAttribute("href", "http://www.imdb.com/title/" + movie["imdbID"]);
+	a.setAttribute("id", movie["imdbID"]);
 
 	// Step 3: append 
 
-	li.appendChild(h2);
-	li.appendChild(p);
 	li.appendChild(a);
 	results.appendChild(li);
 
 }
+
+// function updatePoster(json {
+// 	// homework: build this function!
+// })
 
 // updateRestaurants(json.objects);
