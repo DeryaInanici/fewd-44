@@ -135,16 +135,17 @@ function moveCaterpillar() {
 
 
 // Make butterfly fly
+// -----------------------------------------------------
 
 function flyButterfly() {
-  TweenMax.set(butterfly, {display:'block', x:1500, y:600});
+  TweenMax.set(butterfly, {display:'block', x:1250, y:600});
    
   var flugLinie = new Array();
   for(var i = 0; i < 3; i++) {
-    var coordinate = {x:roundedRandomNumberBetween(-500,500), y:roundedRandomNumberBetween(-500,500)};
+    var coordinate = {x:roundedRandomNumberBetween(-400,400), y:roundedRandomNumberBetween(-400,400)};
     flugLinie.push(coordinate);
   }
   flugLinie.push({x:10, y:-400});
-  TweenMax.to(butterfly, 20, {bezier:{curviness:1.25, values:flugLinie, autoRotate:90}, delay:0.4, ease:Linear.easeNone});
+  TweenMax.to(butterfly, 30, {bezier:{curviness:1.25, values:flugLinie, autoRotate:90}, delay:0.4, ease:Linear.easeNone});
 }
 
