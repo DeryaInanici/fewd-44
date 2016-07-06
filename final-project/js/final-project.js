@@ -21,23 +21,18 @@ var fly = document.querySelector('.fly');
 
 var pusteblume = document.querySelector('.pusteblume');
 
-var seed1 = document.querySelector('.seed-1');
+var seedContainer = document.querySelector('.seed-container');
 
-var seed2 = document.querySelector('.seed-2')
+var caterpillar = document.querySelector('.caterpillar');
 
-var seed3 = document.querySelector('.seed-3')
-
-var seed4 = document.querySelector('.seed-4')
-
-var seed5 = document.querySelector('.seed-5')
-
-var seed6 = document.querySelector('.seed-6')
+var butterfly = document.querySelector('.butterfly');
 
 
 //Events
 //--------------------
 
 // Toggle text when clicking on number 1
+// ----------------------------------------------------
 
 number1.addEventListener('click', toggleText1);
 
@@ -47,6 +42,7 @@ function toggleText1() {
 
 
 // Toggle text when clicking on number 2
+// ----------------------------------------------------
 
 number2.addEventListener('click', toggleText2);
 
@@ -56,6 +52,7 @@ function toggleText2() {
 }
 
 // Toggle text when clicking on number 3
+// ----------------------------------------------------
 
 number3.addEventListener('click', toggleText3);
 
@@ -65,6 +62,7 @@ function toggleText3() {
 
 
 // Toggle text when clicking on number 4
+// ----------------------------------------------------
 
 number4.addEventListener('click', toggleText4);
 
@@ -74,6 +72,7 @@ function toggleText4() {
 
 
 // Toggle text when clicking on number 5
+// ----------------------------------------------------
 
 number5.addEventListener('click', toggleText5);
 
@@ -82,29 +81,70 @@ function toggleText5() {
 }
 
 // Make the fly fly
+// ----------------------------------------------------
 
 fly.addEventListener('mouseover', makeFlyFly);
 
 function makeFlyFly() { 
-TweenMax.to(fly, 0.4, {rotation: 180, ease:Quad.easeInOut});
-TweenMax.to(fly, 3, {bezier:{curviness:1.25, values:[{x:100, y:250}, {x:300, y:0}, {x:500, y:400}], autoRotate:90}, delay:0.4, ease:Power1.easeOut});
-TweenMax.to(fly, 0.4, {alpha: 0, delay: 2, ease:Quad.easeInOut});
+  var flugLinie = new Array();
+  for(var i = 0; i < 6; i++) {
+    var coordinate = {x:roundedRandomNumberBetween(-500,500), y:roundedRandomNumberBetween(-500,500)};
+    flugLinie.push(coordinate);
+  }
+  flugLinie.push({x:0, y:0});
+TweenMax.to(fly, 3, {bezier:{curviness:1.25, values:flugLinie, autoRotate:90}, delay:0.4, ease:Linear.easeNone});
 }
 
 // Make seeds fly
+// ---------------------------------------------------
 
 pusteblume.addEventListener('mouseover', makeSeedsFly);
 
 function makeSeedsFly() {
-   TweenMax.to(seed1, 2, {x:-400, y:-10, rotation:-20, ease:Quad.easeOut, onStart:changeSeedOpacity, onStartParams:[seed1]});
-   TweenMax.to(seed2, 2.3, {x:-400, y:40, rotation:-40, ease:Quad.easeOut, onStart:changeSeedOpacity, onStartParams:[seed2]});
-   TweenMax.to(seed3, 2.6, {x:-400, y:-60, rotation:-20, ease:Quad.easeOut, onStart:changeSeedOpacity, onStartParams:[seed3]});
-   TweenMax.to(seed4, 2.5, {x:-400, y:60, rotation:-60, ease:Quad.easeOut, onStart:changeSeedOpacity, onStartParams:[seed4]});
-   TweenMax.to(seed5, 3, {x:-400, y:-50, rotation:-20, ease:Quad.easeOut, onStart:changeSeedOpacity, onStartParams:[seed5]});
-   TweenMax.to(seed6, 3.1, {x:-400, y:80, rotation:-10, ease:Quad.easeOut, onStart:changeSeedOpacity, onStartParams:[seed6]}); 
+  for(var i = 0; i < roundedRandomNumberBetween(7,12); i++) {
+    var seed = document.createElement('img');
+    seed.classList.add('seed');
+    seed.src = "img/seed1.png";
+    seedContainer.appendChild(seed);
+    TweenMax.set(seed, {rotation:roundedRandomNumberBetween(-20,20)});
+    TweenMax.to(seed, 5, {x:-800, y:roundedRandomNumberBetween(-500,300), rotation:roundedRandomNumberBetween(-10,-60), ease:Quad.easeOut, delay:i*0.06});
+    TweenMax.to(seed, 1, {alpha:1, delay:1+i*0.02, onComplete:removeSeed, onCompleteParams:[seed]});
+  }
 }
 
-function changeSeedOpacity(seed) {
-    TweenMax.set(seed, {alpha:1})
+function removeSeed(seed) {
+    seedContainer.removeChild(seed);
+}
+
+// Randomize
+// ----------------------------------------------------
+
+function roundedRandomNumberBetween(min, max) {
+    return Math.floor(min + (Math.random() * (max-min)));
+}
+
+// Move caterpillar
+// --------------------------------------------------
+
+caterpillar.addEventListener('mouseover', moveCaterpillar);
+
+function moveCaterpillar() {
+  caterpillar.src="img/caterpillar.gif";
+  TweenMax.to(caterpillar, 20, {x:1500, ease:Linear.easeNone, onComplete:flyButterfly})
+}
+
+
+// Make butterfly fly
+
+function flyButterfly() {
+  TweenMax.set(butterfly, {display:'block', x:1500, y:600});
+   
+  var flugLinie = new Array();
+  for(var i = 0; i < 3; i++) {
+    var coordinate = {x:roundedRandomNumberBetween(-500,500), y:roundedRandomNumberBetween(-500,500)};
+    flugLinie.push(coordinate);
+  }
+  flugLinie.push({x:10, y:-400});
+  TweenMax.to(butterfly, 20, {bezier:{curviness:1.25, values:flugLinie, autoRotate:90}, delay:0.4, ease:Linear.easeNone});
 }
 
