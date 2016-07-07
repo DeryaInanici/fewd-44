@@ -139,15 +139,6 @@ function moveCaterpillar() {
 
 function flyButterfly() {
   TweenMax.set(butterfly, {display:'block', x:1250, y:600});
-   
-  // var flugLinie = new Array();
-  // for(var i = 0; i < 3; i++) {
-  //   var coordinate = {x:roundedRandomNumberBetween(-400,400), y:roundedRandomNumberBetween(-400,400)};
-  //   flugLinie.push(coordinate);
-  // }
-  // flugLinie.push({x:10, y:-400});
-
   TweenMax.to(butterfly, 30, {bezier:{curviness:1.25, values:[{x:100, y:-150}, {x:0, y:400}, {x:410, y:240}], autoRotate:90}, delay:0.4, ease:Linear.easeNone});
-  // TweenMax.to(butterfly, 30, {bezier:{curviness:1.25, values:flugLinie, autoRotate:90}, delay:0.4, ease:Linear.easeNone});
 }
 
