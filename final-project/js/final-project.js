@@ -95,6 +95,7 @@ function makeFlyFly() {
 TweenMax.to(fly, 3, {bezier:{curviness:1.25, values:flugLinie, autoRotate:90}, delay:0.4, ease:Linear.easeNone});
 }
 
+
 // Make seeds fly
 // ---------------------------------------------------
 
@@ -142,3 +143,12 @@ function flyButterfly() {
   TweenMax.to(butterfly, 30, {bezier:{curviness:1.25, values:[{x:100, y:-150}, {x:0, y:400}, {x:410, y:240}], autoRotate:90}, delay:0.4, ease:Linear.easeNone});
 }
 
+// Make butterfly fly away
+// --------------------------------------------------
+
+butterfly.addEventListener('mouseover', flyAwayButterfly);
+
+function flyAwayButterfly() {
+  TweenMax.to(butterfly, 7, {bezier:{curviness:1.25, values:[{x:600, y:100}, {x:1200, y:-170}], autoRotate:90}, delay:0.4, ease:Linear.easeNone});
+
+}
