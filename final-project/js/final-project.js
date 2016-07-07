@@ -130,7 +130,7 @@ caterpillar.addEventListener('mouseover', moveCaterpillar);
 
 function moveCaterpillar() {
   caterpillar.src="img/caterpillar-1.gif";
-  TweenMax.to(caterpillar, 20, {x:1250, ease:Linear.easeNone, onComplete:flyButterfly})
+  TweenMax.to(caterpillar, 25, {x:1250, ease:Linear.easeNone, onComplete:flyButterfly})
 }
 
 
